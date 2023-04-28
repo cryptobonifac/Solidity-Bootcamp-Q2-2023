@@ -9,6 +9,11 @@ contract HelloWorld {
         text = "Hello World";
         owner = msg.sender;
     }
+    
+     modifier onlyOwner() {
+        require (msg.sender == owner, "Caller is not the owner");
+        _;
+    }
 
     function helloWorld() public view returns (string memory) {
         return text;
@@ -21,10 +26,5 @@ contract HelloWorld {
     function transferOwnership(address newOwner) public onlyOwner {
         owner = newOwner;
     }
-
-    modifier onlyOwner()
-    {
-        require (msg.sender == owner, "Caller is not the owner");
-        _;
-    }
+    
 }
