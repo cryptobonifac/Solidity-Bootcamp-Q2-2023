@@ -5,3 +5,4 @@
 |Discord UserName|Wallet|
 | ----------- | ----------- |
 |bonifac1|0x1a46F10BaE623B208b3Fb353E948d29d3f2bFd2e|
+|Axel R.|0xa56436FC54B8201a2a5340f16be693B3711Bf9c1|
