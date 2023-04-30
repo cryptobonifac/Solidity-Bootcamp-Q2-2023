@@ -11,13 +11,15 @@
 |sassit|0x63Ec8bcF66479CE5844Eb8cb5147C9D1CC448B95|
 |elwombat|0xD6f1386080518f6fd1a71638b831b231202d3B6f|
 
+
 ## Weekly submit form split
 |No.|Discord UserName|
-|Week 1|  Axel R. |
-|Week 2|bonifac1  |
-|Week 3|tba  |
-|Week 4|tba  |
-|Week 5|tba  |
-|Week 6|tba  |
-|Week 7|tba  |
-|Week 8|tba  |
+| ----------- | ----------- |
+|Week 1|Axel R.|
+|Week 2|bonifac1|
+|Week 3|tba|
+|Week 4|tba|
+|Week 5|tba|
+|Week 6|tba|
+|Week 7|tba|
+|Week 8|tba|
