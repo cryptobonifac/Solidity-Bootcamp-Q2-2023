@@ -16,7 +16,7 @@ async function main(){
     const mnemonics = process.env.MNEMONIC as string;
 
     if(!mnemonics) {
-        console.error("mnemonics are missing in .evn");
+        console.error("mnemonics are missing in .env");
         process.exitCode = 1;
     }
 
@@ -30,10 +30,10 @@ async function main(){
 
     const BallotContract = new ethers.Contract(BALLOT_DEPLOYED_CONTRACT_ADDRESS,ballotContractJson.abi,provider)
 
-    const winnerName = await BallotContract.winnerName(); 
+    const winnerName = await BallotContract.winnerName();
     const chairperson = await BallotContract.chairperson();
 
-     console.log(`Winner name is: ${winnerName}`);  
+     console.log(`Winner name is: ${winnerName}`);
      console.log(`Chairperson is : ${chairperson}`);
 }
 
