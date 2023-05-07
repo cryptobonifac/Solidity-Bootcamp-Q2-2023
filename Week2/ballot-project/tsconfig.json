@@ -1,9 +1,8 @@
 {
   "include": [
     "./scripts",
-    "./test",
-    "./typechain-types",
-    "deploy/01-deploy-ballot.ts"
+    "./tests",
+    "./typechain-types"
   ],
   "files": ["./hardhat.config.ts"],
   "compilerOptions": {
