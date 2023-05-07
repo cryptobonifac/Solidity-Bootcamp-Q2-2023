@@ -34,14 +34,30 @@ describe("Ballot", function () {
     });
 
     it("has zero votes for all proposals", async function () {
-      // TODO
-      throw Error("Not implemented");
+      
+      for (let index = 0; index < PROPOSALS.length; index++) {
+        const proposal = await ballotContract.proposals(index);
+        expect(proposal.voteCount).to.eq(0);
+      }
+
     });
     it("sets the deployer address as chairperson", async function () {
-      // TODO
-      throw Error("Not implemented");
+
+      let chairperson = await ballotContract.chairperson(); 
+      let [deployer]= await  ethers.getSigners();
+
+
+      expect(chairperson).to.be.eq(deployer.address);
+
     });
     it("sets the voting weight for the chairperson as 1", async function () {
+
+      let chairperson = await ballotContract.chairperson(); 
+
+
+
+
+
       // TODO
       throw Error("Not implemented");
     });
