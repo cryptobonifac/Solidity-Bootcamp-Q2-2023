@@ -20,4 +20,4 @@ https://sepolia.etherscan.io/tx/0x1be5e37f19d1184a170b664e1af73063af99ac871fb75c
 - script located in directorz `scripts\2.readEtherscanProvider` was used to interact with already deployed contract in Sepolia and getting chairperson address and winner game
 
 ## Testing 
-- ballot tests were updated.
+- ballot tests were updated. 
