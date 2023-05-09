@@ -6,8 +6,10 @@ dotenv.config();
 
 const PROPOSALS = ["Proposal 1", "Proposal 2", "Proposal 3", "Proposal 4"];
 
+// Mumbai contract 
 const BALLOT_DEPLOYED_CONTRACT_ADDRESS = "0xa8C5aa27886Cb6A26c3F5Cd6D5Aa1D4F2CF6DaBB";
-const TESTNET = "sepolia";
+
+const TESTNET = "maticmum";
 
 async function main(){
 
