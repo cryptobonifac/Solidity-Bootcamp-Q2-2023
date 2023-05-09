@@ -10,6 +10,9 @@
 !.yarn/cache
 #.pnp.*
 
+# visual studio 
+.vscode/*
+
 node_modules
 .env
 coverage
