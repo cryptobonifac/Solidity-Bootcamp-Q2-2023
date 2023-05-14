@@ -21,7 +21,7 @@ task("accounts", "Prints the list of accounts", async (taskArgs, hre) => {
 
 const config: HardhatUserConfig = {
   solidity: {
-    compilers: [{ version: "0.8.17" }, { version: "0.8.4" }],
+    compilers: [{ version: "0.8.18" }],
     settings: {
       optimizer: {
         enabled: true,
@@ -32,7 +32,7 @@ const config: HardhatUserConfig = {
       },
     },
   },
-  paths: { tests: "test" },
+  paths: { tests: "tests" },
   networks: {
     mumbai: {
       url: MUMBAI_RPC_URL,
