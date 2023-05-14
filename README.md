@@ -17,9 +17,9 @@
 | ----------- | ----------- |
 |Week 1|Axel R.|
 |Week 2|bonifac1|
-|Week 3|tba|
-|Week 4|tba|
-|Week 5|tba|
-|Week 6|tba|
-|Week 7|tba|
-|Week 8|tba|
+|Week 3|Calum|
+|Week 4|Isaac|
+|Week 5|Palmcivet|
+|Week 6|Teddypender|
+|Week 7|TSass|
+|Week 8|Group 9|
