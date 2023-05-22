@@ -12,7 +12,7 @@ Object.defineProperty(exports, "__esModule", { value: true });
 exports.AppService = void 0;
 const common_1 = require("@nestjs/common");
 const ethers_1 = require("ethers");
-const tokenJson = require("./assets/TokenizedBallot.json");
+const tokenJson = require("./assets/MyERC20Votes.json");
 const config_1 = require("@nestjs/config");
 let AppService = class AppService {
     constructor(configService) {
@@ -25,7 +25,7 @@ let AppService = class AppService {
         return this.provider.getBlock('latest');
     }
     getAddress() {
-        const tokenAddress = this.configService.get('TOKEN_ADDRESS');
+        const tokenAddress = this.configService.get('ERC20_TOKEN_ADDRESS');
         return tokenAddress;
     }
     async getTotalSupply() {
