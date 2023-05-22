@@ -1,6 +1,6 @@
 import { Injectable } from '@nestjs/common';
 import { ethers, Contract } from 'ethers';
-import * as tokenJson from './assets/TokenizedBallot.json';
+import * as tokenJson from './assets/MyERC20Votes.json';
 import { ConfigService } from '@nestjs/config';
 
 @Injectable()
@@ -23,7 +23,7 @@ export class AppService {
   }
 
   getAddress() {
-    const tokenAddress = this.configService.get<string>('TOKEN_ADDRESS'); // getting from .env
+    const tokenAddress = this.configService.get<string>('ERC20_TOKEN_ADDRESS'); // getting from .env
     return tokenAddress;
   }
 
