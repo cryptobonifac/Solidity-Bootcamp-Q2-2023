@@ -181,7 +181,7 @@ function Vote() {
 				</div>
 			)}
 			<select onChange={(ev) => setProposalIndex(ev.target.value)}>
-				<option disabled>Select the proposal to vote to</option>
+				<option disabled selected>Select the proposal to vote to</option>
 				{proposals && proposals.map((proposal, idx) => (
 					<option value={idx}>{utils.parseBytes32String(proposal.name)}</option>
 				))}
