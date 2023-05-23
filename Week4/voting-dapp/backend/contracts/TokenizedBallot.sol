@@ -30,17 +30,18 @@ contract TokenizedBallot {
     }
 
     function vote(uint proposal, uint256 amount) external {
-        uint256 voteAllocation = tokenContract.getPastVotes(
-            msg.sender,
-            targetBlockNumber
-        );
-        uint256 votesSpentAfter = votingPowerSpent[msg.sender] + amount;
         require(
-            votesSpentAfter <= voteAllocation,
-            "Vote amount takes voter over allocation"
+            votingPower(msg.sender) >= amount,
+            "TokenizedBallot: trying to vote more than allowed."
         );
         votingPowerSpent[msg.sender] += amount;
         proposals[proposal].voteCount += amount;
+    }
+
+    function votingPower(address account) public view returns (uint256) {
+        return
+            tokenContract.getPastVotes(account, targetBlockNumber) -
+            votingPowerSpent[account];
     }
 
     function winningProposal() public view returns (uint winningProposal_) {

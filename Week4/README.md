@@ -17,7 +17,7 @@ yarn hardhat run /scripts/[script-name].ts
 ```
 cd /voting-dapp/frontend
 yarn && yarn build
-yarn start
+yarn dev
 ```
 
 ### NOTE: remember to configure the .env file into every project by following the .env.example file
