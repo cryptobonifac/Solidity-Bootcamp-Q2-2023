@@ -16,6 +16,7 @@
 		"next": "13.1.2",
 		"react": "18.2.0",
 		"react-dom": "18.2.0",
+		"sumer-sdk": "^5.0.2",
 		"wagmi": "^0.12.6"
 	},
 	"devDependencies": {

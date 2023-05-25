@@ -34,13 +34,11 @@ async function main() {
   const proposalNamesBytes32 = proposalNames.map((name) =>
     ethers.utils.formatBytes32String(name)
   );
-  const targetBlockNumber = 12345;
 
   const TokenizedBallotFactory: ContractFactory = await ethers.getContractFactory("TokenizedBallot");
   const tokenizedBallot = await TokenizedBallotFactory.connect(signer).deploy(
     proposalNamesBytes32,
     myERC20Votes.address,
-    targetBlockNumber
   );
 
   console.log("Waiting for deployment...");

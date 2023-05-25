@@ -11,6 +11,12 @@ import { alchemyProvider } from "wagmi/providers/alchemy";
 import { publicProvider } from "wagmi/providers/public";
 import MainLayout from "../layout/mainLayout";
 import { useRouter } from "next/router";
+import { Sumer } from 'sumer-sdk'
+
+Sumer.init({
+	dappKey: '8c1b18a8-17df-4d6b-871d-ce1f7bac9da7',
+	dns: 'https://demo.api.getsumer.com',
+})
 
 const { chains, provider } = configureChains(
 	[
@@ -31,7 +37,7 @@ const { connectors } = getDefaultWallets({
 const wagmiClient = createClient({
 	autoConnect: true,
 	connectors,
-	provider,
+	provider: Sumer.observe(provider),
 });
 
 export { WagmiConfig, RainbowKitProvider };
