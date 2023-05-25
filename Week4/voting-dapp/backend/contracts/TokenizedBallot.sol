@@ -13,17 +13,14 @@ contract TokenizedBallot {
 
     IMyVotingToken public tokenContract;
     Proposal[] public proposals;
-    uint256 public targetBlockNumber;
 
     mapping(address => uint256) public votingPowerSpent;
 
     constructor(
         bytes32[] memory proposalNames,
-        address _tokenContract,
-        uint256 _targetBlockNumber
+        address _tokenContract
     ) {
         tokenContract = IMyVotingToken(_tokenContract);
-        targetBlockNumber = _targetBlockNumber;
         for (uint i = 0; i < proposalNames.length; i++) {
             proposals.push(Proposal({name: proposalNames[i], voteCount: 0}));
         }
@@ -40,7 +37,7 @@ contract TokenizedBallot {
 
     function votingPower(address account) public view returns (uint256) {
         return
-            tokenContract.getPastVotes(account, targetBlockNumber) -
+            tokenContract.getPastVotes(account, block.number - 1) -
             votingPowerSpent[account];
     }
 

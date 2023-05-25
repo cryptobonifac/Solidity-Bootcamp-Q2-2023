@@ -182,7 +182,7 @@ function Vote() {
 			)}
 			<select onChange={(ev) => setProposalIndex(ev.target.value)}>
 				<option disabled selected>Select the proposal to vote to</option>
-				{proposals && proposals.map((proposal, idx) => (
+				{proposals && proposals.filter(Boolean).map((proposal, idx) => (
 					<option value={idx}>{utils.parseBytes32String(proposal.name)}</option>
 				))}
 			</select>
@@ -252,7 +252,7 @@ function Results() {
 			{!contractData && (
 				<>Loading result information...</>
 			)}
-			{contractData && (
+			{contractData && contractData[0] && (
 				<div>
 					<p>Winning proposal index: {parseInt(contractData[0]._hex)}</p>
 					<p>Winning proposal name: {utils.parseBytes32String(contractData[1])}</p>
